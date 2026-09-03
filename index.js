@@ -38,9 +38,9 @@ app.post("/API/potencia", (req,res) =>{
 })
 
 app.post ("/API/raiz",(req,res) =>{
-    const num1 = req.body.num1
-    const num2 = req.body.num2
-    res.send({resultado: num1/num2})
+    let x = req.body.num
+    Math.sqrt(x)
+        res.send({resultado: Math.sqrt(x)})
 })
 
 app.listen(3000, () => {
