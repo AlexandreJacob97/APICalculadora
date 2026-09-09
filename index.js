@@ -38,11 +38,12 @@ app.post("/API/potencia", (req,res) =>{
 })
 
 app.post ("/API/raiz",(req,res) =>{
-    let x = req.body.num
-    Math.sqrt(x)
-        res.send({resultado: Math.sqrt(x)})
+    const num1 = req.body.num1
+
+    res.send({resultado: num1 ** 0.5})
+    
 })
 
 app.listen(3000, () => {
-    console.log("A porta do servidor é a 3000!")
+    console.log("A porta do servidor é a 3000! ")
 })
